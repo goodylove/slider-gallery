@@ -1,8 +1,11 @@
+// declearation of variables
 let slider = document.querySelectorAll(".slider");
 let modal = document.querySelectorAll(".modal");
 let moda = document.querySelectorAll(".moda-img");
 let position = 0;
 let current = 0;
+// functionalites
+//slider
 
 function showSlider() {
   slider.forEach((p) => {
@@ -16,10 +19,12 @@ function showSlider() {
   thumbNail();
 }
 
+//interval
 setInterval(() => {
   showSlider();
-}, 4000);
+}, 10000);
 
+// thumbnail(small-images)
 function thumbNail() {
   modal.forEach((p) => {
     p.style.opacity = "0.6";
@@ -32,6 +37,8 @@ function thumbNail() {
   }
   modal[current - 1].style.opacity = " 1";
 }
+
+//right
 
 let right = document.querySelector(".right");
 
@@ -48,7 +55,7 @@ right.addEventListener("click", () => {
 
   thumbNail();
 });
-
+//left
 let left = document.querySelector(".left");
 
 left.addEventListener("click", () => {
